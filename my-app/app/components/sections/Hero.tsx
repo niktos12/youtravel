@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <div
       id="highlights"
-      className="relative min-h-screen p-4 lg:p-5 mt-16 lg:mt-20 bg-[url(/bg-main.jpg)] bg-cover bg-center rounded-2xl lg:rounded-3xl flex flex-col justify-end overflow-hidden"
+      className="relative min-h-screen p-4 lg:p-5 bg-[url(/bg-main.jpg)] bg-cover bg-center rounded-2xl lg:rounded-3xl flex flex-col justify-end overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
 
