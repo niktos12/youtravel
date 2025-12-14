@@ -1,20 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --background: #2121210A;
+  --background: #2121210a;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* --font-sans: var(--font-geist-sans); */
-  /* --font-mono: var(--font-geist-mono); */
+  --animate-fade-in-up: fadeInUp 0.8s ease-out;
+  --animate-fade-in-down: fadeInDown 0.8s ease-out;
+  --animate-fade-in-left: fadeInLeft 0.8s ease-out;
+  --animate-fade-in-right: fadeInRight 0.8s ease-out;
 }
 
+/* Swiper стили */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 24px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #3da5d9 !important;
+  opacity: 0.3 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  width: 32px !important;
+  border-radius: 4px !important;
+  background-color: #3da5d9 !important;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  margin: 0 2px !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 24px !important;
+  }
+}
+
+.swiper {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.swiper-wrapper {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Общие стили */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: all 0.3s ease;
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Inter;
+}
+
+/* Кастомные классы */
+.gradient-text {
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.shadow-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
 }
